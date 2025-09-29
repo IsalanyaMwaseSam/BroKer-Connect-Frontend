@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Search, Calendar, MessageSquare, Bell, MapPin, Eye, Home } from 'lucide-react';
+import { Heart, Search, Calendar, MessageSquare, Eye, Home } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
-import PropertyCard from '../../components/Property/PropertyCard';
 
 const ClientDashboard: React.FC = () => {
   const { user } = useAuth();
@@ -12,9 +11,7 @@ const ClientDashboard: React.FC = () => {
     viewedProperties: 0,
     messages: 0
   });
-  const [recentlyViewed, setRecentlyViewed] = useState([]);
-  const [savedProperties, setSavedProperties] = useState([]);
-  const [upcomingBookings, setUpcomingBookings] = useState([]);
+
 
   useEffect(() => {
     // Mock data

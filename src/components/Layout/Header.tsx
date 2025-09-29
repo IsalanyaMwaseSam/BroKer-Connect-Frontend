@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, Bell, User, LogOut, MessageCircle } from 'lucide-react';
+import { Bell, User, LogOut, MessageCircle } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';
 
 const Header: React.FC = () => {
