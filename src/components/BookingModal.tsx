@@ -30,7 +30,7 @@ const BookingModal: React.FC<BookingModalProps> = ({
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:3001/api/bookings', {
+      const response = await fetch(`${process.env.NODE_ENV === 'production' ? 'https://brokerconnectug.netlify.app' : 'http://localhost:3001'}/api/bookings`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
