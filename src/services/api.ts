@@ -1,8 +1,9 @@
-import { Property, Booking, Transaction, Review } from '../types';
+import { Property, Booking, Review } from '../types';
 import { authService } from './auth';
+import { API_BASE_URL } from '../config/api';
 
 class ApiService {
-  private baseURL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+  private baseURL = API_BASE_URL;
 
   private getHeaders() {
     const token = authService.getToken();
